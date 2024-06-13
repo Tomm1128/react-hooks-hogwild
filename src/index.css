@@ -140,6 +140,36 @@ ul {
   clear: both;
 }
 
+#add-hog-form{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px 20px;
+  margin: 25px;
+}
+
+#add-hog-form h3{
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+#add-hog-form label {
+  text-align: right;
+  padding-right: 10px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+#add-hog-form input[type=text], #add-hog-form select {
+  width: 100%;
+  box-sizing: border-box;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+#add-hog-form button {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
 
 @keyframes App-logo-spin {
   from {
