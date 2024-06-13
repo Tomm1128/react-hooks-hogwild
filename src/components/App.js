@@ -4,8 +4,10 @@ import Nav from "./Nav";
 import hogs from "../porkers_data";
 import HogTileList from "./HogTileList";
 import Filter from "./Filter"
+import AddHogForm from "./AddHogForm";
 
 function App() {
+  const [hogList, setHogList] = useState(hogs)
   const [isChecked, setCheck] = useState(false)
   const [sortName, setSortName] = useState(true)
   const [sortWeight, setSortWeight] = useState(true)
@@ -23,6 +25,12 @@ function App() {
     newSortType === "sort-name" ? setSortName(!sortName) : setSortWeight(!sortWeight)
   }
 
+  const updateHogList = (newHog) => {
+    setHogList([...hogList, newHog])
+  }
+
+  console.log(hogList)
+
 	return (
 		<div className="App">
 			<Nav />
@@ -33,8 +41,9 @@ function App() {
         sortWeight={sortWeight}
         onSort={sortHandler}
       />
+      <AddHogForm updateHogList={updateHogList}/>
       <HogTileList
-        hogs={hogs}
+        hogs={hogList}
         isChecked={isChecked}
         sortType={sortType}
         sortName={sortName}
