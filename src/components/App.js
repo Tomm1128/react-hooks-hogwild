@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Nav from "./Nav";
 
 import hogs from "../porkers_data";
+
+import Nav from "./Nav";
 import HogTileList from "./HogTileList";
 import Filter from "./Filter"
 import AddHogForm from "./AddHogForm";
@@ -28,8 +29,6 @@ function App() {
   const updateHogList = (newHog) => {
     setHogList([...hogList, newHog])
   }
-
-  console.log(hogList)
 
 	return (
 		<div className="App">

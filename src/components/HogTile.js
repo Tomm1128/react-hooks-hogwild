@@ -25,7 +25,6 @@ const HogTile = ({name, image, specialty, weight, greased, medals}) => {
     setHidden(!isHidden)
   }
 
-
   return (
     <div className="pigTile" style={checkDisplay}>
       <div>

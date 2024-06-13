@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import HogTile from "./HogTile"
 
 const HogTileList = ({hogs, isChecked, sortType, sortName, sortWeight}) => {
