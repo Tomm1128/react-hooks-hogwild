@@ -1,9 +1,13 @@
 import React, { useState } from "react"
 import HogTile from "./HogTile"
 
-const HogTileList = ({hogs}) => {
+const HogTileList = ({hogs, isChecked}) => {
 
-  const hogTiles = hogs.map(hog => {
+  const filteredHogs = hogs.filter(hog => {
+    return isChecked ? hog.greased === true : true
+  })
+
+  const hogTiles = filteredHogs.map(hog => {
     return (
       <HogTile
         key={hog.name}
