@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Filter({isChecked, onCheckEvent}) {
+function Filter({isChecked, onCheckEvent, sortName, sortWeight, onSort}) {
 
 	return (
 		<div id="filter">
@@ -11,6 +11,8 @@ function Filter({isChecked, onCheckEvent}) {
         onChange={onCheckEvent}
       />
       <label htmlFor="checkbox">Greased</label>
+      <button id="sort-name" onClick={onSort}>Name {sortName ? "ASC" : "DESC"}</button>
+      <button id="sort-weight" onClick={onSort}>Weight {sortWeight ? "ASC" : "DESC"}</button>
     </div>
 	)
 }
