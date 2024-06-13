@@ -10,9 +10,16 @@ function Filter({isChecked, onCheckEvent, sortName, sortWeight, onSort}) {
         checked={isChecked}
         onChange={onCheckEvent}
       />
-      <label htmlFor="checkbox">Greased</label>
-      <button id="sort-name" onClick={onSort}>Name {sortName ? "ASC" : "DESC"}</button>
-      <button id="sort-weight" onClick={onSort}>Weight {sortWeight ? "ASC" : "DESC"}</button>
+      <label htmlFor="checkbox"> Greased </label>
+      <label htmlFor="sort">Sort: </label>
+      <select id="sort-name" onChange={onSort} value={sortName}>
+        <option value={true} >Name ASC</option>
+        <option value={false}>Name DESC</option>
+      </select>
+      <select id="sort-weight" onChange={onSort} value={sortWeight}>
+        <option value={true} >Weight ASC</option>
+        <option value={false}>Weight DESC</option>
+      </select>
     </div>
 	)
 }
