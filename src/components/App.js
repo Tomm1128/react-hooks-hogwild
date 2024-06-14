@@ -44,6 +44,7 @@ function App() {
         sortName={sortName}
         sortWeight={sortWeight}
       />
+      <div className="footer"></div>
 		</div>
 	);
 }
