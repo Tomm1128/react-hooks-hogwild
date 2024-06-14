@@ -32,7 +32,7 @@ const HogTile = ({name, image, specialty, weight, greased, medals}) => {
         <label>Hide </label>
         <input type="checkbox" checked={isHidden} onChange={updateHidden}></input>
       </div>
-      <div className="">
+      <div>
         <img className="minPigTile" src={image} alt="Pig" onClick={handleImageClick}></img>
       </div>
       {detailsOn ? additionalDetails : ""}
