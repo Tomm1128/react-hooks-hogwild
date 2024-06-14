@@ -38,7 +38,7 @@ const HogTileList = ({hogs, isChecked, sortType, sortName, sortWeight}) => {
   })
 
 	return (
-		<div className="ui grid container">
+		<div className="ui three stackable cards">
       {hogTiles}
 		</div>
 	);

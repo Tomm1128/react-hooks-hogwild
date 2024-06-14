@@ -5,7 +5,7 @@ const HogTile = ({name, image, specialty, weight, greased, medals}) => {
   const [isHidden, setHidden] = useState(false)
 
   const additionalDetails = (
-    <div className="details">
+    <div className="content">
       <p>Specialty: {specialty}</p>
       <p>Weight: {weight}</p>
       <p>Greased: {greased.toString()}</p>
@@ -26,13 +26,15 @@ const HogTile = ({name, image, specialty, weight, greased, medals}) => {
   }
 
   return (
-    <div className="pigTile" style={checkDisplay}>
+    <div className="ui card pigTile" style={checkDisplay}>
       <div>
         <h3>{name}</h3>
         <label>Hide </label>
         <input type="checkbox" checked={isHidden} onChange={updateHidden}></input>
       </div>
-      <img className="minPigTile" src={image} alt="Pig" onClick={handleImageClick}></img>
+      <div className="">
+        <img className="minPigTile" src={image} alt="Pig" onClick={handleImageClick}></img>
+      </div>
       {detailsOn ? additionalDetails : ""}
     </div>
   )
