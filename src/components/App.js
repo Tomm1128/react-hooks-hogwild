@@ -14,10 +14,6 @@ function App() {
   const [sortWeight, setSortWeight] = useState(true)
   const [sortType, setSortType] = useState("sort-name")
 
-  const checkHandler = () => {
-    setCheck(!isChecked)
-  }
-
   const sortHandler = (event) => {
     const newSortType = event.target.id
 
@@ -35,7 +31,7 @@ function App() {
 			<Nav />
       <Filter
         isChecked={isChecked}
-        onCheckEvent={checkHandler}
+        onCheckEvent={setCheck}
         sortName={sortName}
         sortWeight={sortWeight}
         onSort={sortHandler}

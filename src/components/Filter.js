@@ -18,7 +18,7 @@ function Filter({isChecked, onCheckEvent, sortName, sortWeight, onSort}) {
         type="checkbox"
         id="checkbox"
         checked={isChecked}
-        onChange={onCheckEvent}
+        onChange={() => onCheckEvent(!isChecked)}
       />
     </div>
 	)

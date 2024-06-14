@@ -7,12 +7,12 @@ const HogTileList = ({hogs, isChecked, sortType, sortName, sortWeight}) => {
     return isChecked ? hog.greased === true : true
   })
 
-  const sortedHogs = filteredHogs.sort((hog, nextHog) => {
+  const sortedHogs = filteredHogs.toSorted((hog, nextHog) => {
     if(sortType === "sort-name"){
       if(!sortName){
-        return hog.name < nextHog.name ? 1 : -1
+        return nextHog.name.localeCompare(hog.name)
       } else {
-        return hog.name > nextHog.name ? 1 : -1
+        return hog.name.localeCompare(nextHog.name)
       }
     } else {
       if(!sortWeight){
