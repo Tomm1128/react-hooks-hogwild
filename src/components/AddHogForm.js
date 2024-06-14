@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 function AddHogForm({updateHogList}) {
   const [hogName, setHogName] = useState("")
@@ -67,4 +67,4 @@ function AddHogForm({updateHogList}) {
 	)
 }
 
-export default AddHogForm;
+export default AddHogForm

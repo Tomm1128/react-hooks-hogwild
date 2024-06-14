@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function Filter({isChecked, onCheckEvent, sortName, sortWeight, onSort}) {
 
@@ -24,4 +24,4 @@ function Filter({isChecked, onCheckEvent, sortName, sortWeight, onSort}) {
 	)
 }
 
-export default Filter;
+export default Filter

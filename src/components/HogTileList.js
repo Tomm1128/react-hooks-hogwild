@@ -41,7 +41,7 @@ const HogTileList = ({hogs, isChecked, sortType, sortName, sortWeight}) => {
 		<div className="ui three stackable cards">
       {hogTiles}
 		</div>
-	);
+	)
 }
 
 export default HogTileList

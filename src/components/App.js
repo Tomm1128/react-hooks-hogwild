@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-import hogs from "../porkers_data";
+import hogs from "../porkers_data"
 
-import Nav from "./Nav";
-import HogTileList from "./HogTileList";
+import Nav from "./Nav"
+import HogTileList from "./HogTileList"
 import Filter from "./Filter"
-import AddHogForm from "./AddHogForm";
+import AddHogForm from "./AddHogForm"
 
 function App() {
   const [hogList, setHogList] = useState(hogs)
@@ -46,7 +46,7 @@ function App() {
       />
       <div className="footer"></div>
 		</div>
-	);
+	)
 }
 
-export default App;
+export default App
