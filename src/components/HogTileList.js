@@ -1,8 +1,8 @@
 import React from "react"
+
 import HogTile from "./HogTile"
 
 const HogTileList = ({hogs, isChecked, sortType, sortName, sortWeight}) => {
-
   const filteredHogs = hogs.filter(hog => {
     return isChecked ? hog.greased === true : true
   })

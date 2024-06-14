@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 
-import hogs from "../porkers_data"
-
-import Nav from "./Nav"
-import HogTileList from "./HogTileList"
-import Filter from "./Filter"
 import AddHogForm from "./AddHogForm"
+import Filter from "./Filter"
+import HogTileList from "./HogTileList"
+import Nav from "./Nav"
+
+import hogs from "../porkers_data"
 
 function App() {
   const [hogList, setHogList] = useState(hogs)

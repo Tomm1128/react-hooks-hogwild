@@ -1,7 +1,6 @@
 import React from "react"
 
 function Filter({isChecked, onCheckEvent, sortName, sortWeight, onSort}) {
-
 	return (
 		<div id="filter">
       <label htmlFor="sort">Sort: </label>
